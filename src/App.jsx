@@ -1,5 +1,6 @@
 import Leftbar from './components/leftbar/Leftbar';
 import Navbar from './components/navbar/Navbar';
+import PrivateRoute from './components/privateroute/PrivateRoute';
 import Rightbar from './components/rightbar/Rightbar';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login'
@@ -34,7 +35,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <PrivateRoute><Home /></PrivateRoute>,
         },
         {
           path: "/profile/:id",
