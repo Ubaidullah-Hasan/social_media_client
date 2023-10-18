@@ -31,11 +31,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <PrivateRoute><Layout /></PrivateRoute>,
       children: [
         {
           path: "/",
-          element: <PrivateRoute><Home /></PrivateRoute>,
+          element: <Home />,
         },
         {
           path: "/profile/:id",

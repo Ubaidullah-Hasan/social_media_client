@@ -1,12 +1,15 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const PrivateRoute = ({children}) => {
-    const currentUser = false;
+    const location = useLocation();
+    const path = location.pathname || '/';
+    const currentUser = true; // todo
+
 
     if(!currentUser) {
         return (
-            <Navigate to={"/login"} state={true} />
+            <Navigate to={"/login"} replace={true} state={{from: path}} />
         )
     }
 

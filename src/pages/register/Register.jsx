@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './register.scss';
 
 const Register = () => {
+    const location = useLocation();
+    const path = location?.state?.from;
+    console.log(path); // todo
+
     return (
         <div className='register'>
             <div className="card">
@@ -9,7 +13,7 @@ const Register = () => {
                     <h1>Lama social</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis obcaecati facere, sapiente dolor recusandae voluptatibus et aliquam natus doloribus option.</p>
                     <span>Do you have an account?</span>
-                    <Link to={"/login"}>
+                    <Link to={"/login"} state={{from: path}} replace={true}>
                     <button>Login</button>
                     </Link>
                 </div>
