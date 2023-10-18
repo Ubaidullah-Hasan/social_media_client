@@ -1,0 +1,88 @@
+.register {
+    height: 100vh;
+    background-color: rgb(203, 192, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        display: flex;
+        width: 50%;
+        border-radius: 10px;
+        background-color: white;
+        min-height: 600px;
+        overflow: hidden;
+        flex-direction: row-reverse;
+
+        .left {
+            flex: 1;
+            background-image: linear-gradient(rgba(75, 2, 97, 0.5), rgba(75,
+                        2, 97, 0.5)), url('../../assets/images/register.jpg');
+            background-position: center;
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+
+            h1 {
+                font-size: 80px;
+                line-height: 80px;
+            }
+
+            p {}
+
+            span {
+                font-style: 14px;
+            }
+
+            button {
+                width: 50%;
+                border: none;
+                background-color: white;
+                padding: 10px;
+                color: rebeccapurple;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+
+            h1 {
+                color: #555;
+                text-transform: capitalize;
+            }
+
+            form {
+                display: flex;
+                gap: 30px;
+                flex-direction: column;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                }
+
+                button {
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: #938eef;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+}
