@@ -3,7 +3,7 @@ import './profile.scss';
 const Profile = () => {
     return (
         <div>
-            
+            profile
         </div>
     );
 };
