@@ -21,7 +21,9 @@ function App() {
         <Navbar />
         <div style={{display: 'flex'}}>
           <Leftbar />
-          <Outlet></Outlet>
+          <div style={{flex: 6}}>
+            <Outlet></Outlet>
+          </div>
           <Rightbar />
         </div>
       </div>
