@@ -14,9 +14,15 @@
 
 
         .item {
+            -webkit-box-shadow: 1px 1px 10px -4px rgba(189, 185, 189, 1);
+            -moz-box-shadow: 1px 1px 10px -4px rgba(189, 185, 189, 1);
+            box-shadow: 1px 1px 10px -4px rgba(189, 185, 189, 1);
+            padding: 20px;
+            margin-bottom: 20px;
 
             span {
                 color: gray;
+                text-transform: capitalize;
             }
 
             .user {
@@ -29,6 +35,7 @@
                     display: flex;
                     align-items: center;
                     gap: 20px;
+                    position: relative;
 
                     img {
                         width: 40px;
@@ -37,8 +44,23 @@
                         object-fit: cover;
                     }
 
+                    .online{
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 30px;
+                    }
+
+                    p {
+                        color: gray;
+                    }
+
                     span {
                         font-weight: 500;
+                        color: black;
                     }
                 }
 
@@ -52,7 +74,14 @@
                         color: white;
                         cursor: pointer;
                         padding: 5px;
-                        
+
+                        &:first-child {
+                            background-color: #5271ff;
+                        }
+
+                        &:last-child {
+                            background-color: #f0544f;
+                        }
                     }
                 }
 

@@ -17,7 +17,7 @@ function App() {
   const Layout = () => {
 
     return (
-      <div>
+      <div className='theme-dark'>
         <Navbar />
         <div style={{display: 'flex'}}>
           <Leftbar />
