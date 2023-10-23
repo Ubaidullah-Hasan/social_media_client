@@ -1,10 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
 import './login.scss';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContextProvider';
 
 const Login = () => {
+    const { login } = useContext(AuthContext);
+
     const location = useLocation();
     const path = location?.state?.from;
     console.log(path); // todo
+
+    const handleLogin = () => {
+        login();
+    }
 
 
     return (
@@ -23,7 +31,7 @@ const Login = () => {
                     <form>
                         <input type="text" name="name" placeholder='Username' />
                         <input type="password" name="password" placeholder='Password' />
-                        <button>login</button>
+                        <button onClick={handleLogin}>login</button>
                     </form>
                 </div>
             </div>
