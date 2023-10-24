@@ -1,11 +1,17 @@
 @import "../../style.scss";
 
-.home{
-    @include theify($themes){
+.home {
+    @include theify($themes) {
         background-color: themed('bgSoft');
         color: themed('textColor');
         padding: 20px 70px;
-        
+
+        @include mobile {
+            padding: 10px;
+        }
+        @include tablet {
+            padding: 20px;
+        }
 
     }
 }
