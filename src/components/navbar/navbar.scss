@@ -42,7 +42,15 @@
                     background-color: transparent;
                     color: themed('textColor');
 
-                    &::placeholder{
+                    @include mobile {
+                        display: none;
+                    }
+
+                    @include tablet {
+                        width: 200px;
+                    }
+
+                    &::placeholder {
                         color: themed('textColorSoft');
                     }
                 }
@@ -54,10 +62,18 @@
             align-items: center;
             gap: 20px;
 
+            @include mobile {
+                display: none;
+            }
+
             .user {
                 display: flex;
                 align-items: center;
                 gap: 20px;
+
+                @include tablet {
+                    display: none;
+                }
 
                 img {
                     width: 30px;
@@ -69,6 +85,6 @@
                 span {}
             }
         }
-        
+
     }
 }
